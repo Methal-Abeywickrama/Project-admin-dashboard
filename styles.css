@@ -1,0 +1,215 @@
+.html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid: 
+    [row1-start] "sidebar header" 2.5fr [row1-end]
+    [row2-start] "sidebar main" 12.5fr [row2-end]
+    / 4.3fr 16.5fr;
+}
+
+#sidebar {
+  color: white
+  background-color: aqua;
+  grid-area: sidebar;
+  display: grid;
+  grid-template-rows: 154fr 636fr 1130fr;
+  grid-template-areas: 
+    'nav-title'
+    'navbar-1'
+    'navbar-2';
+}
+#nav-title {
+  background-color: purple;
+  grid-area: nav-title;
+}
+
+#navbar-1 {
+  background-color: peru;
+  grid-area: navbar-1;
+  display: grid;
+  grid-template-rows: repeat(6, 35px);
+
+}
+.nav-link {
+  border: 2px solid red;
+}
+#navbar-2 {
+  background-color: magenta;
+  grid-area: navbar-2;
+  display: grid;
+  grid-template-rows: repeat(3, 35px);
+}
+
+#main {
+  background-color: bisque;
+  grid-area: main;
+  display: grid;
+  grid: 
+    [st1] 'projectsection announcements' 840fr [en1]
+    [st2] 'projectsection trending' 750fr [en2]
+    / 1632fr 633fr ;
+}
+
+#projectsection {
+  background-color: grey;
+  grid-area: projectsection;
+  display: grid; 
+  grid-template-rows: 117fr 1490fr;
+  grid-template-areas: 
+    'pr-topic'
+    'pr-cards';
+}
+
+#pr-topic {
+  background-color: bisque;
+  grid-area: pr-topic;
+}
+
+#pr-cards {
+  background-color: gold;
+  grid-area: pr-cards;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+
+}
+
+.pr-card {
+  border: 4px solid blue;
+}
+
+
+#announcements {
+  background-color: violet;
+  grid-area: announcements;
+  display: grid; 
+  grid-template-rows: 110fr 688fr ;
+  grid-template-areas: 
+    'ann-topic'
+    'ann-cards';
+}
+
+#ann-topic {
+  background-color: beige;
+  grid-area: ann-topic;
+}
+
+#ann-cards {
+  background-color: rgb(29, 131, 144);
+  grid-area: ann-cards;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.ann-card {
+  border: 2px solid blue;
+}
+
+#trending {
+  background-color: azure;
+  grid-area: trending;
+  display: grid; 
+  grid-template-rows: 119fr 680fr;
+  grid-template-areas: 
+    'tr-topic'
+    'tr-cards';
+}
+
+#tr-topic {
+  background-color: beige;
+  grid-area: tr-topic;
+}
+#tr-cards {
+  background-color: rgba(28, 196, 112, 0.405);
+  grid-area: tr-cards;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.tr-card {
+  border: 2px solid blue;
+}
+
+#header {
+  grid-area: header;
+  display: grid;
+  grid-template-rows: 56fr 69fr;
+  grid-template-areas: 
+    "header-top"
+    "header-bottom";
+}
+.header-top {
+  background-color: lightgreen;
+  grid-area: header-top;
+  display: grid;
+  grid-template-columns: 145fr 1429fr 107fr 156fr 417fr;
+  grid-template-areas: 'search-icon search-bar bell prof-pic name';
+}
+.header-bottom {
+  background-color: lightcoral;
+  grid-area: header-bottom;
+  display: grid;
+  grid-template-columns: 250fr 1108fr 903fr;
+  grid-template-areas: "prof-pic-2 details buttons";
+}
+
+#prof-pic-2 {
+  background-color: green;
+  grid-area: prof-pic-2;
+
+}
+
+#details {
+  background-color: violet;
+  grid-area: details;
+  display: grid;
+  grid-template-rows: 88fr 104fr;
+  grid-template-areas:
+   "greeting" 
+   "handle";
+}
+
+#greeting {
+  background-color: yellow;
+  grid-area: greeting;
+}
+
+#handle {
+  background-color: black;
+  grid-area: handle;
+}
+
+#buttons {
+  background-color: white;
+  grid-area: buttons;
+}
+
+#search-icon {
+  background-color: black;
+  grid-area: search-icon;
+}
+
+#search-bar {
+  background-color: pink;
+  grid-area: search-bar;
+}
+
+#bell {
+  background-color: yellow;
+  grid-area: bell;
+}
+
+#prof-pic {
+  background-color: red;
+  grid-area: prof-pic;
+
+}
+
+#name {
+  background-color: blue;
+  grid-area: name;
+}
